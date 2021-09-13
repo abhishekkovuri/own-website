@@ -4,9 +4,9 @@
             <div class="image-wrapper">
                 <img src="@/assets/header.jpeg" alt="AK" width="200" height="250">
             </div>
-            <div class="title-text"> Abhishek Kovuri</div>
+            <div class="title-text color-gradient"> Abhishek Kovuri</div>
         </div>
-        <div class="blog">
+        <div class="blog color-gradient">
             My Blogs
         </div>
         <div class="blog-content">
@@ -52,12 +52,7 @@
 <style lang="scss" scoped>
 .blog {
     margin: 10px 35px 0px;
-    font-size: 24px;
-    text-decoration: underline;
-}
-
-.blog-content {
-    justify-content: center;
+    font-size: 20px;
 }
 
 .model-wrapper {
@@ -65,7 +60,6 @@
 
     .title-text {
         font-weight: 900;
-        color: rgb(163, 107, 23);
         font-size: 32px;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -91,13 +85,9 @@ a {
 }
 
 .blog-content {
-    padding: 35px;
+    padding: 25px;
     box-sizing: border-box;
     margin-bottom: 20px;
-
-    .select-wrapper {
-        margin: 15px 0;
-    }
 
     .blog-card-wrapper {
         display: flex;
@@ -115,7 +105,7 @@ a {
         }
 
         .bullet {
-            color: rgb(9, 124, 145)
+            color: rgb(224, 196, 37)
         }
 
         .blog-title {

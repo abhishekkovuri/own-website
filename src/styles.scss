@@ -23,3 +23,8 @@ body {
 .pointer {
 	cursor: pointer;
 }
+.color-gradient {
+	background: -webkit-linear-gradient(rgb(138, 84, 4), rgb(224, 196, 37));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
