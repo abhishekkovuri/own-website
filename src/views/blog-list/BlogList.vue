@@ -16,7 +16,7 @@
                         class="blog-card pointer"
                         v-for="(post, index) of getPostsList"
                         :key="index">
-                        <a :href="post.link" class="link">
+                        <a :href="post.link" class="link" target="_blank">
                             <div class="blog-category">
                                 <span class="bullet"><em class="fa fa-circle"></em></span>
                                 <!-- {{Object.values(post.categories.slice(0,1)).toString().toUpperCase() | stringReplace}} -->
@@ -91,7 +91,7 @@ a {
 
     .blog-card-wrapper {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-flow: row wrap;
         gap: 40px;
 
