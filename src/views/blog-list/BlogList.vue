@@ -6,7 +6,7 @@
             </div>
             <div class="title-text color-gradient"> Abhishek Kovuri</div>
         </div>
-        <div class="blog color-gradient">
+        <div class="blog color-gradient-side">
             My Blogs
         </div>
         <div class="blog-content">
@@ -51,7 +51,8 @@
 
 <style lang="scss" scoped>
 .blog {
-    margin: 10px 35px 0px;
+    margin-top: 25px;
+    text-align: center;
     font-size: 20px;
 }
 
@@ -90,10 +91,11 @@ a {
     margin-bottom: 20px;
 
     .blog-card-wrapper {
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        place-items: center;
+        column-gap: 20px;
+        row-gap: 30px;
 
         .blog-card {
             border: 1px solid #999;
