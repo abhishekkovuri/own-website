@@ -58,6 +58,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 20px;
 	.image-wrapper {
 		display: flex;
 		flex-direction: row;
@@ -77,6 +78,24 @@
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.introduction {
+		padding: 20px;
+		.image-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 16px;
+			gap: 20px;
+			img {
+				width: 150px;
+				height: 150px;
+			}
+		}
 	}
 }
 </style>

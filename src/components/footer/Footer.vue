@@ -43,7 +43,7 @@
 	align-items: center;
 	gap: 50px;
 	width: 100vw;
-	height: 100%;
+	height: 40px;
 	color: rgb(0, 0, 0);
 	font-size: 16px;
 	color: #fff;
@@ -57,6 +57,12 @@
 			text-decoration: none;
 			color: inherit;
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footer-wrapper {
+		font-size: 12px;
 	}
 }
 </style>

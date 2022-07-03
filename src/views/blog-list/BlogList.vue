@@ -49,7 +49,7 @@
 .content {
 	display: flex;
 	justify-content: center;
-	width: 70%;
+	width: 70vw;
 	gap: 10px;
 
 	.cards {
@@ -103,6 +103,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		text-align: center;
+		margin-bottom: 50px;
 	}
 
 	.thumbnail-img {
@@ -113,6 +114,65 @@
 
 	.individual-link {
 		float: right;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		.cards {
+			.card {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				border: 1px solid #999;
+				border-radius: 20px;
+				padding: 20px;
+				width: 70vw;
+			}
+			.details {
+				display: flex;
+				flex-direction: column;
+				font-size: 10px;
+
+				.description {
+					text-overflow: ellipsis;
+					overflow: hidden;
+					display: -webkit-box !important;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+					white-space: normal;
+				}
+
+				.blog-title {
+					font-size: 12px;
+				}
+				.blog-categories {
+					font-size: 10px;
+					font-weight: 500;
+					color: #333;
+				}
+				.blog-date {
+					font-size: 10px;
+					font-weight: 500;
+				}
+			}
+			.individual-link {
+				float: none;
+				display: flex;
+				justify-content: center;
+			}
+		}
+		.more {
+			font-size: 10px;
+			font-weight: 500;
+			text-align: center;
+		}
+
+		.thumbnail-img {
+			margin-top: 5px;
+			width: 210px;
+			height: 210px;
+		}
 	}
 }
 </style>

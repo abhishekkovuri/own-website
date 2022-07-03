@@ -15,7 +15,6 @@
 			</div>
 		</div>
 	</div>
-	
 </template>
 
 <script src="./app.js"></script>
@@ -46,16 +45,23 @@ footer {
 main {
 	display: flex;
 	flex: 1;
-}
-
-.content {
-	margin: 3% auto 10%;
-
+	justify-content: center;
+	margin: 50px auto;
 }
 
 .wrapper {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	main {
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		margin: 15% auto;
+	}
 }
 </style>
