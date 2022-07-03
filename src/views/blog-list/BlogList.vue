@@ -1,148 +1,118 @@
 <template>
-    <div class="blog-list-wrapper">
-        <div class="model-wrapper">
-            <div class="image-wrapper">
-                <img src="@/assets/header.jpeg" alt="AK" width="200" height="250">
-            </div>
-            <div class="title-text color-gradient"> Abhishek Kovuri</div>
-        </div>
-        <div class="blog color-gradient-side">
-            My Blogs
-        </div>
-        <div class="blog-content">
-            <div v-if="getPostsList.length">
-                <div class="blog-card-wrapper">
-                    <div
-                        class="blog-card pointer"
-                        v-for="(post, index) of getPostsList"
-                        :key="index">
-                        <a :href="post.link" class="link" target="_blank">
-                            <div class="blog-category">
-                                <span class="bullet"><em class="fa fa-circle"></em></span>
-                                <!-- {{Object.values(post.categories.slice(0,1)).toString().toUpperCase() | stringReplace}} -->
-                                {{"Javascript, FrontEnd".toString() | stringReplace}}
-                            </div>
-                            <div>
-                                <img class="logo thumbnail-img" :src="post.thumbnail" alt="post image">
-                            </div>
-                            <div
-                                class="blog-title"
-                                :title="post.title">
-                                {{post.title}}
-                            </div>
-                            <div class="blog-date">
-                                {{moment(post.pubDate).fromNow()}}
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div
-                class="no-data"
-                v-else>
-                No Data for the selected Category
-            </div>
-        </div>
-    </div>
+	<section class="content">
+		<div class="cards" v-if="getPostsList.length">
+			<div class="card" v-for="(post, index) of getPostsList" :key="index">
+				<div>
+					<img
+						class="logo thumbnail-img"
+						:src="post.thumbnail"
+						alt="post image"
+					/>
+				</div>
+				<div class="details">
+					<div class="blog-title pointer" :title="post.title">
+						{{ post.title }}
+					</div>
+					<div class="description">
+						{{ post.description | replaceTags }}
+					</div>
+					<div>
+						<a
+							class="individual-link pointer"
+							:href="post.link"
+							target="_blank"
+						>
+							read more..</a
+						>
+					</div>
+					<div class="blog-categories">
+						<span v-for="category of post.categories" :key="category">
+							#{{ category }}
+						</span>
+					</div>
+					<div class="blog-date">
+						Published {{ moment(post.pubDate).fromNow() }}
+					</div>
+				</div>
+			</div>
+			<div class="more">
+				For more blogs please
+				<a class="link" :href="mediumLink" target="_blank">click here</a>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script src="./blog-list.js"></script>
 
 <style lang="scss" scoped>
-.blog {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 20px;
-}
+.content {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+	gap: 10px;
 
-.model-wrapper {
-    position: relative;
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: auto;
+	}
 
-    .title-text {
-        font-weight: 900;
-        font-size: 32px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: center;
-    }
+	.card {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+		border: 1px solid #999;
+		border-radius: 20px;
+		padding: 20px;
+	}
 
-    .image-wrapper {
-        display: flex;
-        justify-content: center;
+	.details {
+		display: flex;
+		flex-direction: column;
+		font-size: 14px;
 
-        img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    }
-}
+		.description {
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: -webkit-box !important;
+			-webkit-line-clamp: 7;
+			-webkit-box-orient: vertical;
+			white-space: normal;
+		}
+		.blog-title {
+			font-size: 28px;
+		}
+		.blog-categories {
+			font-size: 18px;
+			margin-right: 10px;
+		}
+		.blog-categories {
+			font-size: 18px;
+			font-weight: 500;
+			color: #333;
+		}
+		.blog-date {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
 
-a {
-    color: inherit;
-    text-decoration: inherit;
-}
+	.more {
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+	}
 
-.blog-content {
-    padding: 25px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+	.thumbnail-img {
+		margin-top: 5px;
+		width: 350px;
+		height: 250px;
+	}
 
-    .blog-card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        place-items: center;
-        column-gap: 20px;
-        row-gap: 30px;
-
-        .blog-card {
-            border: 1px solid #999;
-            border-radius: 10px;
-            height: 250px;
-            width: 250px;
-            padding: 10px;
-            position: relative;
-        }
-
-        .bullet {
-            color: rgb(224, 196, 37)
-        }
-
-        .blog-title {
-            margin: 5px 0px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-        }
-
-        .blog-description {
-            margin-top: 5px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 10;
-            -webkit-box-orient: vertical;
-        }
-
-        .blog-date {
-            position: absolute;
-            bottom: 10px;
-            color: #999;
-            font-size: 14px;
-        }
-    }
-
-    .no-data {
-        margin: 10%;
-        text-align: center;
-    }
-
-    .thumbnail-img {
-        margin-top: 5px;
-        width: 250px;
-        height: 150px
-    }
+	.individual-link {
+		float: right;
+	}
 }
 </style>

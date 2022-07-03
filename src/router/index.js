@@ -1,15 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 const blogList = () => import('@/views/blog-list/BlogList.vue')
+const homePage = () => import('@/views/home/home.vue')
 
 Vue.use(VueRouter)
 
 const routes = [
 	{
-		path: '/',
+		path: '/blogs',
 		name: 'BlogListing',
 		component: blogList
+	},
+	{
+		path: '/',
+		name: 'homePage',
+		component: homePage
 	}
+
 ]
 
 const router = new VueRouter({

@@ -4,17 +4,12 @@ export default {
 	data () {
 		return {
 			category: '',
-			pageNo: 1
+			pageNo: 1,
+			mediumLink: "https://medium.com/@abhishekkovuri25"
 		}
 	},
 	created () {
 		this.$store.dispatch('getPostsFromAPI')
-	},
-	methods: {
-		// goToDetails (slugName) {
-		// 	const params = { slugName }
-		// 	this.$router.push({ name: 'blogDetail', params })
-		// }
 	},
 	computed: {
 		...mapGetters(['getCategories', 'getPostsList', 'getTotalPages'])

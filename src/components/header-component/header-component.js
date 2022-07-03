@@ -1,4 +1,4 @@
-import AK from '@/assets/AK-logo.png'
+import AK from '@/assets/AK.svg'
 
 export default {
 	name: 'HeaderComponent',

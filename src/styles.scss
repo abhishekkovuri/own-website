@@ -2,8 +2,7 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	// font-family: "Gill Sans", sans-serif;
-	font-family: fantasy;
+	font-family: monospace;
 	font-size: 14px;
 }
 
@@ -24,7 +23,7 @@ body {
 	cursor: pointer;
 }
 .color-gradient {
-	background: -webkit-linear-gradient(rgb(138, 84, 4), rgb(224, 196, 37));
+	background: -webkit-linear-gradient(#806E01, rgb(224, 196, 37));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -32,4 +31,14 @@ body {
 	background: -webkit-linear-gradient(rgb(4, 81, 117), rgb(224, 196, 37));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.background-gradient {
+	background-image: linear-gradient(
+		to right,
+		#806E01,
+		#806E01,
+		rgb(224, 196, 37),
+		#806E01,
+	);
 }
