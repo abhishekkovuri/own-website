@@ -11,10 +11,21 @@
 		<div>
 			<ul class="nav">
 				<li class="nav-item">
-					<a class="nav-link" aria-current="page" href="/">Home</a>
+					<a
+						class="nav-link"
+						:class="[$route.path === '/' ? 'active' : '']"
+						aria-current="page"
+						href="/"
+						>Home</a
+					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/blogs">Blogs</a>
+					<a
+						class="nav-link"
+						:class="[$route.path === '/blogs' ? 'active' : '']"
+						href="/blogs"
+						>Blogs</a
+					>
 				</li>
 			</ul>
 		</div>
@@ -39,8 +50,14 @@
 		height: 40px;
 	}
 
-	.nav-link {
-		color: #fff;
+	.nav {
+		.nav-link {
+			color: #fff;
+		}
+		.active {
+			background-color: #473d07;
+			height: 40px;
+		}
 	}
 }
 </style>
