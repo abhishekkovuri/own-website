@@ -82,16 +82,14 @@
 			white-space: normal;
 		}
 		.blog-title {
-			font-size: 28px;
-		}
-		.blog-categories {
-			font-size: 18px;
-			margin-right: 10px;
+			font-size: 24px;
+			text-decoration: underline;
 		}
 		.blog-categories {
 			font-size: 18px;
 			font-weight: 500;
-			color: #333;
+			margin-right: 10px;
+			color: #806E01;
 		}
 		.blog-date {
 			font-size: 18px;
@@ -144,12 +142,13 @@
 				}
 
 				.blog-title {
-					font-size: 12px;
+					font-size: 14px;
+					text-decoration: underline;
 				}
 				.blog-categories {
-					font-size: 10px;
+					font-size: 12px;
 					font-weight: 500;
-					color: #333;
+					color: #806E01;
 				}
 				.blog-date {
 					font-size: 10px;
