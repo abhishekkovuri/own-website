@@ -7,15 +7,16 @@
 				<br />
 				I'm <b>Abhishek Kovuri</b> and I am a <b>UI developer @Thoughtworks</b>.
 				<br />
+				I have around {{ moment().year() - 2019 }}+ years of experience in
+				frontend domain.
+				<br />
 				I’m inquisitive by nature and love exploring new technologies.
 				<br />
-				I have around 3+ years of experience in frontend domain.
+				I also enjoy writing blogs and love to share my knowledge to everyone.
 				<br />
-				I also enjoy writing blogs and love to share knowledge to everyone.
+				Outside of work, I enjoy spending time with family and browsing.
 				<br />
-				Outside of work I enjoy spending time with family and browsing.
-				<br />
-				I hail from Sangareddy, Telangana - 502001, INDIA
+				I hail from Sangareddy, Telangana - 502001, India
 			</div>
 		</div>
 		<div class="link">

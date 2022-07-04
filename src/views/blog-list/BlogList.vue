@@ -159,7 +159,7 @@
 			.individual-link {
 				float: none;
 				display: flex;
-				justify-content: center;
+				justify-content: left;
 			}
 		}
 		.more {
