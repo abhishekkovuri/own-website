@@ -170,7 +170,7 @@
 
 		.thumbnail-img {
 			margin-top: 5px;
-			width: 210px;
+			width: 100%;
 			height: 210px;
 		}
 	}
