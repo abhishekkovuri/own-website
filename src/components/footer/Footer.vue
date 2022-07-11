@@ -1,7 +1,7 @@
 <template>
 	<div class="footer-wrapper background-gradient">
 		Abhishek Kovuri © {{moment().year()}}
-		<div class="link">
+		<div class="links">
 			<a
 				href="https://www.linkedin.com/in/abhishek-kovuri-25101996/"
 				target="_blank"
@@ -48,7 +48,7 @@
 	font-size: 16px;
 	color: #fff;
 
-	.link {
+	.links {
 		display: flex;
 		gap: 20px;
 		
