@@ -22,9 +22,6 @@
 		<div>
 			<Experience />
 		</div>
-		<div>
-			<ProfileLink />
-		</div>
 	</section>
 </template>
 <script src="./home"></script>
