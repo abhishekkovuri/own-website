@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "unit": "vue-cli-service test:unit",
-    "start": "vue-cli-service serve"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve"
   },
   "dependencies": {
     "axios": "^0.21.4",

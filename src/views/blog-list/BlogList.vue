@@ -31,7 +31,7 @@
 						</span>
 					</div>
 					<div class="blog-date">
-						Published {{ moment(post.pubDate).fromNow() }}
+						Published {{ moment(post.pubDate).add(330, 'minutes').fromNow() }}
 					</div>
 				</div>
 			</div>
