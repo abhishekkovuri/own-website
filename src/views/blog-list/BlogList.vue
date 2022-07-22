@@ -10,7 +10,7 @@
 					/>
 				</div>
 				<div class="details">
-					<div class="blog-title pointer" :title="post.title">
+					<div class="blog-title" :title="post.title">
 						{{ post.title }}
 					</div>
 					<div class="description">
