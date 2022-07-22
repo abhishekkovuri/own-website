@@ -19,7 +19,7 @@
 				I hail from Sangareddy, Telangana - 502001, India
 			</div>
 		</div>
-		<div>
+		<div class="mb-10">
 			<Experience />
 		</div>
 	</section>
@@ -32,6 +32,10 @@
 	justify-content: center;
 	align-items: center;
 	gap: 50px;
+
+	.mb-10 {
+		margin-bottom: 10px;
+	}
 	.image-wrapper {
 		display: flex;
 		flex-direction: row;
